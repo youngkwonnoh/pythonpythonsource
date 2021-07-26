@@ -27,6 +27,15 @@ while loop and count < 3:
     except TimeoutException:
         loop = False
 
+# 댓글 내용 출력하기
+comment_list = driver.find_elements_by_css_selector("ul.list_comment li")
+
+for num, comment in enumerate(comment_list):
+
+    content = comment.find_element_by_css_selector("div p")
+
+    print("[{}] : {}".format(num, content.text))
+
 time.sleep(3)
 
 driver.close()
