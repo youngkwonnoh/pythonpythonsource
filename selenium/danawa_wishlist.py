@@ -19,13 +19,17 @@ login.click()
 
 userid = driver.find_element_by_id("danawa-member-login-input-id")
 # input 내용 지우기 clear()
+# 다나와 아이디
 userid.clear()
-userid.send_keys("i03man")
+userid.send_keys("")
 
+# 다나와 비밀번호
 userpw = driver.find_element_by_id("danawa-member-login-input-pwd")
 userpw.clear()
-userpw.send_keys("dudtka@^86")
+userpw.send_keys("")
 userpw.send_keys(Keys.RETURN)
+###----------------------------------- 로그인 자동화
+
 
 # 제품명 입력 => 제품 정보 => 원하는 제품 선택 후 관심상품
 # 관심상품 페이지로 이동 => 관심상품 목록 출력하기(제품명, 제품상세정보, 가격)
